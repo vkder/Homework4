@@ -8,7 +8,7 @@ require_relative 'wagon'
 require_relative 'pass_wagon'
 require_relative 'cargo_wagon'
 
-class Choose_options
+class Main
   attr_accessor :trains, :stations, :routes
 
   def initialize
@@ -22,6 +22,7 @@ def menu
   loop do
     options
     puts "Choose right option: "
+
     case choice
     when 1 then create_station
     when 2 then create_train
@@ -34,7 +35,8 @@ def menu
     when 9 then move_train
     when 11 then move_back
     when 11 then display_stations
-    when 0 then break
+    else break
+    end
   end
 end
 
@@ -264,6 +266,6 @@ end
     end
   end
 end
-end
+
 
 
